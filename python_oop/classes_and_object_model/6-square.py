@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """Módulo que define la clase Square."""
 
@@ -35,7 +34,9 @@ class Square:
         """Valida y establece la posición."""
         if (not isinstance(value, tuple) or len(value) != 2
                 or any(type(n) is not int or n < 0 for n in value)):
-            raise TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError(
+                "position must be a tuple of 2 positive integers"
+            )
         self.__position = value
 
     def area(self):
@@ -49,6 +50,7 @@ class Square:
         else:
             for i in range(self.__size):
                 print(" " * self.__position[0] + "#" * self.__size)
+            print()
 
     def __str__(self):
         """Devuelve la representación del cuadrado."""
@@ -56,5 +58,7 @@ class Square:
             return ""
         lines = []
         for i in range(self.__size):
-            lines.append(" " * self.__position[0] + "#" * self.__size)
+            lines.append(
+                " " * self.__position[0] + "#" * self.__size
+            )
         return "\n".join(lines)
