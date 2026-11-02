@@ -8,4 +8,3 @@ class Square:
     def __init__(self, size):
         """Inicializa el cuadrado con su tamaño."""
         self.__size = size
-        
