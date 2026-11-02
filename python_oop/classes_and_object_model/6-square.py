@@ -52,11 +52,11 @@ class Square:
             print()
             return
 
-        for i in range(self.__size):
-            print(" " * self.__position[0] + "#" * self.__size)
-
         for i in range(self.__position[1]):
             print()
+
+        for i in range(self.__size):
+            print(" " * self.__position[0] + "#" * self.__size)
 
     def __str__(self):
         """Devuelve la representación del cuadrado."""
