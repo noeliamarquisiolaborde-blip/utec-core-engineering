@@ -44,12 +44,14 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """Imprime el cuadrado."""
-        if self.__size == 0:
+    """Imprime el cuadrado según su tamaño y posición."""
+    if self.__size == 0:
+        print()
+    else:
+        for i in range(self.__position[1]):
             print()
-        else:
-            for i in range(self.__size):
-                print(" " * self.__position[0] + "#" * self.__size)
+        for i in range(self.__size):
+            print(" " * self.__position[0] + "#" * self.__size)
 
     def __str__(self):
         """Devuelve la representación del cuadrado."""
